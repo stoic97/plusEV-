@@ -1,0 +1,22 @@
+2024-11-20 07:12:12,346 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2024-11-20 07:12:12,396 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'set']
+2024-11-20 07:12:12,398 DEBUG    root            Running [gcloud.config.set] with arguments: [SECTION/PROPERTY: "project", VALUE: "trading-signals-proj"]
+2024-11-20 07:12:12,457 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2024-11-20 07:12:13,917 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "GET /v1/projects/trading-signals-proj?alt=json HTTP/1.1" 403 None
+2024-11-20 07:12:13,922 DEBUG    root            Chosen display Format:default
+2024-11-20 07:12:13,944 WARNING  root            [44676487926-compute@developer.gserviceaccount.com] does not have permission to access projects instance [trading-signals-proj] (or it may not exist): Cloud Resource Manager API has not been used in project 44676487926 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=44676487926 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. This command is authenticated as 44676487926-compute@developer.gserviceaccount.com which is the active account specified by the [core/account] property.
+- '@type': type.googleapis.com/google.rpc.Help
+  links:
+  - description: Google developers console API activation
+    url: https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=44676487926
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: googleapis.com
+  metadata:
+    consumer: projects/44676487926
+    service: cloudresourcemanager.googleapis.com
+  reason: SERVICE_DISABLED
+2024-11-20 07:12:13,946 INFO     ___FILE_ONLY___ Updated property [core/project].
+
+2024-11-20 07:12:13,947 DEBUG    root            Chosen display Format:default
+2024-11-20 07:12:13,948 INFO     root            Display format: "default"
+2024-11-20 07:12:13,948 DEBUG    root            SDK update checks are disabled.

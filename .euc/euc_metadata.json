@@ -1,0 +1,35 @@
+{
+  "instance": {
+    "attributes": {
+      "block-project-ssh-keys": "TRUE",
+      "custom-containers": "{}",
+      "enable-guest-attributes": "TRUE",
+      "enable-oslogin": "TRUE",
+      "idle-timeout-seconds": "1080",
+      "image-url": "projects/cloud-notebooks-managed/global/images/family/beatrix-notebooks-debian-11-py310",
+      "install-nvidia-driver": "True",
+      "install-unattended-upgrades": "False",
+      "notebooks-api": "PROD",
+      "proxy-backend-id": "535883d02fe8088c",
+      "proxy-registration-url": "https://asia-south1.notebooks.cloud.google.com/tun/m/4592f092208ecc84946b8f8f8016274df1b36a14",
+      "proxy-url": "535883d02fe8088c-dot-asia-south1.notebooks.googleusercontent.com",
+      "report-system-health": "True",
+      "runtime-owner": "44676487926-compute@developer.gserviceaccount.com",
+      "runtime-project-number": "44676487926",
+      "runtime-resource-name": "projects/trading-signals-proj/locations/asia-south1/runtimes/managed-notebook-20241114-222022",
+      "runtime-tenant-project-number": "93411112688",
+      "runtime-uid": "cf254b0c-2382-4576-9b63-9064e2c9e314",
+      "shutdown-script": "/opt/deeplearning/bin/shutdown_script.sh",
+      "stop-state": "UNSPECIFIED"
+    },
+    "image": "projects/cloud-notebooks-managed/global/images/beatrix-notebooks-v20241119-debian-11-py310",
+    "machineType": "projects/93411112688/machineTypes/g2-standard-4",
+    "name": "vm-cf254b0c-2382-4576-9b63-9064e2c9e314",
+    "zone": "projects/93411112688/zones/asia-south1-b"
+  },
+  "project": {
+    "attributes": {},
+    "numericProjectId": 93411112688,
+    "projectId": "o4c148afbf92f2208-tp"
+  }
+}

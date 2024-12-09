@@ -1,0 +1,9 @@
+2024-11-26 07:39:17,409 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2024-11-26 07:39:17,412 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'application_default']
+2024-11-26 07:39:17,423 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'application-default', 'revoke']
+2024-11-26 07:39:17,425 DEBUG    root            Running [gcloud.auth.application-default.revoke] with arguments: [--quiet: "True"]
+2024-11-26 07:39:17,426 INFO     ___FILE_ONLY___ Application Default Credentials have not been set up, nothing to revoke.
+
+2024-11-26 07:39:17,426 DEBUG    root            Chosen display Format:none
+2024-11-26 07:39:17,426 INFO     root            Display format: "none"
+2024-11-26 07:39:17,426 DEBUG    root            SDK update checks are disabled.

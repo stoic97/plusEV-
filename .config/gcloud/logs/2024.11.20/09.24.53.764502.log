@@ -1,0 +1,34 @@
+2024-11-20 09:24:53,766 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2024-11-20 09:24:53,768 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'config_helper']
+2024-11-20 09:24:53,771 DEBUG    root            Running [gcloud.config.config-helper] with arguments: [--format: "json", --min-expiry: "1800"]
+2024-11-20 09:24:53,781 DEBUG    root            Chosen display Format:default json
+2024-11-20 09:24:53,782 INFO     root            Display format: "default json"
+2024-11-20 09:24:53,796 INFO     ___FILE_ONLY___ {
+  "configuration": {
+    "active_configuration": "default",
+    "properties": {
+      "compute": {
+        "region": "asia-south1"
+      },
+      "core": {
+        "account": "44676487926-compute@developer.gserviceaccount.com",
+        "disable_usage_reporting": "True",
+        "project": "trading-signals-proj"
+      },
+      "dataproc": {
+        "region": "asia-south1"
+      }
+    }
+  },
+  "credential": {
+    "access_token": "ya29.c.c0ASRK0GZgERcCF6uFADCzuqxwhxthAxX9rVKDMwIaALqYRL_G3IyMZoutem6lrNHU3zRjqV5TBJYKbcmBFKmFBEhosKGbz5qya9WreKoo5yjQbWhhxqlhqFWqzFX-6LJN-_pPb0FVjRD8eOrDrrqohOTn2VWvJno8zRUBaequOnbeSyXjIF7uc-dv56PmU1PK8itvz6RN2eQJ0Ey4LeHVoRw9v0Fyw1L06rFeM3HVdZqyx4BGo4x-Q5cQXErBYfaXuWG0pppPsfhRhHOQudxE8OHfoCrvL4_HpsB2dNZvRl5uwTZYjApTNIec_GVBHCpiRw2F4s2wUtjs-hLGBZJElafOycPyfxVJ8Uwx1DBBmQT5PrquwG7Lmx-0maWvdSn9BS-A-RAOsLJT3Yw95vftFmG4-ci1jYumPK7ZxGKv9tatZaP6j29a5l_sBTYE452ABgY4cfWsRjU1Oy4hxq48Fk64VwOYJoxmRbw29a53zXZRXtldkZV7gbkqy48R_dyZa857lRORZ379FY9V6IuwnYepXq__OjqmlMri0dcRxvt_ftoaluXz6t49XjZ0qOa8dqs9J4SuJhfSn9YbYh64sx7m0pg9Z7U-jdZmk080-dbBJgv9xBQ1kohS3443qRb8gj786jWptokX_ObsfyflVeiSt7bmgX442pnpvoO93xh-dJ-x-lIYn6ru0lOzqzlRqMI3vSoFxOtupYJ6dU4_d2Vv1eWVMg6rZv0WUFMYgV8zcldvO3IpYxam1i7er5fu9pxeVaRl7jw54u3eYvkdlsxn-ff4kzS2jQnIcFcR9f-ndM2B1Olf5t16_3aQuvm725mQV9Vh2d1BBMJirdjh6FviS5VSOaxFUSvBzBq1-hJfee0xI927_8eQssg_Rjad8ZmIZ3golofQ0w3XcVYtR7UfbWaBXuWqul3tMo4WUBpYqIyRyaJlb1OkI3vdw15XXO4bxFfRMOZ2VFSWj6vbzlq1zzVk7W6YRRYVjwbp7x2gk6JYkfyx6vX",
+    "id_token": null,
+    "token_expiry": "2024-11-20T10:23:19Z"
+  },
+  "sentinels": {
+    "config_sentinel": "/home/jupyter/.config/gcloud/config_sentinel"
+  }
+}
+2024-11-20 09:24:53,796 INFO     ___FILE_ONLY___ 
+
+2024-11-20 09:24:53,796 DEBUG    root            SDK update checks are disabled.

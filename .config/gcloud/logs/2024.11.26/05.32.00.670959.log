@@ -1,0 +1,16 @@
+2024-11-26 05:32:00,686 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2024-11-26 05:32:00,965 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'set']
+2024-11-26 05:32:00,967 DEBUG    root            Running [gcloud.config.set] with arguments: [SECTION/PROPERTY: "compute/region", VALUE: "asia-south1"]
+2024-11-26 05:32:01,369 DEBUG    google.auth.transport.requests Making request: GET http://192.168.10.5/computeMetadata/v1/instance/service-accounts/44676487926-compute@developer.gserviceaccount.com/?recursive=true
+2024-11-26 05:32:01,372 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): 192.168.10.5:80
+2024-11-26 05:32:01,374 DEBUG    urllib3.connectionpool http://192.168.10.5:80 "GET /computeMetadata/v1/instance/service-accounts/44676487926-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 144
+2024-11-26 05:32:01,374 DEBUG    google.auth.transport.requests Making request: GET http://192.168.10.5/computeMetadata/v1/instance/service-accounts/44676487926-compute@developer.gserviceaccount.com/token
+2024-11-26 05:32:01,377 DEBUG    urllib3.connectionpool http://192.168.10.5:80 "GET /computeMetadata/v1/instance/service-accounts/44676487926-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 1084
+2024-11-26 05:32:01,709 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2024-11-26 05:32:02,707 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/trading-signals-proj/regions/asia-south1?alt=json HTTP/1.1" 200 None
+2024-11-26 05:32:02,731 WARNING  root            Property validation for compute/region was skipped.
+2024-11-26 05:32:02,742 INFO     ___FILE_ONLY___ Updated property [compute/region].
+
+2024-11-26 05:32:02,744 DEBUG    root            Chosen display Format:default
+2024-11-26 05:32:02,745 INFO     root            Display format: "default"
+2024-11-26 05:32:02,745 DEBUG    root            SDK update checks are disabled.

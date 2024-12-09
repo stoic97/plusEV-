@@ -1,0 +1,11 @@
+2024-11-21 10:22:43,855 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2024-11-21 10:22:44,899 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'set']
+2024-11-21 10:22:44,901 DEBUG    root            Running [gcloud.config.set] with arguments: [SECTION/PROPERTY: "compute/region", VALUE: "asia-south1"]
+2024-11-21 10:22:45,417 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2024-11-21 10:22:46,871 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/trading-signals-proj/regions/asia-south1?alt=json HTTP/1.1" 200 None
+2024-11-21 10:22:46,905 WARNING  root            Property validation for compute/region was skipped.
+2024-11-21 10:22:46,919 INFO     ___FILE_ONLY___ Updated property [compute/region].
+
+2024-11-21 10:22:46,920 DEBUG    root            Chosen display Format:default
+2024-11-21 10:22:46,921 INFO     root            Display format: "default"
+2024-11-21 10:22:46,922 DEBUG    root            SDK update checks are disabled.
