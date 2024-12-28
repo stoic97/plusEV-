@@ -1,0 +1,17 @@
+{"time":"2024-12-25T14:46:49.43593689Z","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-25T14:46:49.460111523Z","level":"INFO","msg":"created symlink","path":"/content/drive/MyDrive/Colab Notebooks/plusEV-/wandb/run-20241225_144649-dhsu1m98/logs/debug-core.log"}
+{"time":"2024-12-25T14:46:49.582066492Z","level":"INFO","msg":"created new stream","id":"dhsu1m98"}
+{"time":"2024-12-25T14:46:49.583434751Z","level":"INFO","msg":"stream: started","id":"dhsu1m98"}
+{"time":"2024-12-25T14:46:49.583446882Z","level":"INFO","msg":"writer: Do: started","stream_id":"dhsu1m98"}
+{"time":"2024-12-25T14:46:49.583490562Z","level":"INFO","msg":"handler: started","stream_id":"dhsu1m98"}
+{"time":"2024-12-25T14:46:49.583516037Z","level":"INFO","msg":"sender: started","stream_id":"dhsu1m98"}
+{"time":"2024-12-25T14:46:51.080182541Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-25T14:50:29.89956754Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-25T14:50:29.90066901Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-25T14:50:30.376646528Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-25T14:50:30.518635032Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2024-12-25T14:50:31.551332277Z","level":"INFO","msg":"stream: closing","id":"dhsu1m98"}
+{"time":"2024-12-25T14:50:31.552093597Z","level":"INFO","msg":"handler: closed","stream_id":"dhsu1m98"}
+{"time":"2024-12-25T14:50:31.552145311Z","level":"INFO","msg":"writer: Close: closed","stream_id":"dhsu1m98"}
+{"time":"2024-12-25T14:50:31.552212424Z","level":"INFO","msg":"sender: closed","stream_id":"dhsu1m98"}
+{"time":"2024-12-25T14:50:31.554223993Z","level":"INFO","msg":"stream: closed","id":"dhsu1m98"}

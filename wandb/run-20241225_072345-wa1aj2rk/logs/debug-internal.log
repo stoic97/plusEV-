@@ -1,0 +1,17 @@
+{"time":"2024-12-25T07:23:45.686958098Z","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2024-12-25T07:23:45.688573628Z","level":"INFO","msg":"created symlink","path":"/content/drive/MyDrive/Colab Notebooks/plusEV-/wandb/run-20241225_072345-wa1aj2rk/logs/debug-core.log"}
+{"time":"2024-12-25T07:23:45.816269218Z","level":"INFO","msg":"created new stream","id":"wa1aj2rk"}
+{"time":"2024-12-25T07:23:45.817708216Z","level":"INFO","msg":"stream: started","id":"wa1aj2rk"}
+{"time":"2024-12-25T07:23:45.817756846Z","level":"INFO","msg":"writer: Do: started","stream_id":"wa1aj2rk"}
+{"time":"2024-12-25T07:23:45.817815873Z","level":"INFO","msg":"handler: started","stream_id":"wa1aj2rk"}
+{"time":"2024-12-25T07:23:45.817844983Z","level":"INFO","msg":"sender: started","stream_id":"wa1aj2rk"}
+{"time":"2024-12-25T07:23:53.791813458Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-12-25T07:23:54.942285694Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-12-25T07:23:54.945189361Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-12-25T07:23:55.519971033Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-12-25T07:23:55.659174854Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2024-12-25T07:23:56.693952418Z","level":"INFO","msg":"stream: closing","id":"wa1aj2rk"}
+{"time":"2024-12-25T07:23:56.695164081Z","level":"INFO","msg":"handler: closed","stream_id":"wa1aj2rk"}
+{"time":"2024-12-25T07:23:56.695198462Z","level":"INFO","msg":"writer: Close: closed","stream_id":"wa1aj2rk"}
+{"time":"2024-12-25T07:23:56.695407144Z","level":"INFO","msg":"sender: closed","stream_id":"wa1aj2rk"}
+{"time":"2024-12-25T07:23:56.697461829Z","level":"INFO","msg":"stream: closed","id":"wa1aj2rk"}
