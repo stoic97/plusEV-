@@ -1,0 +1,9 @@
+[compute]
+region = asia-south1
+
+[core]
+project = trading-signals-proj
+
+[dataproc]
+region = asia-south1
+

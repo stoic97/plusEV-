@@ -1,0 +1,22 @@
+2024-12-05 04:25:47,833 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2024-12-05 04:25:48,487 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'set']
+2024-12-05 04:25:48,489 DEBUG    root            Running [gcloud.config.set] with arguments: [SECTION/PROPERTY: "compute/region", VALUE: "asia-south1"]
+2024-12-05 04:25:49,070 DEBUG    google.auth.transport.requests Making request: GET http://192.168.10.5/computeMetadata/v1/instance/service-accounts/44676487926-compute@developer.gserviceaccount.com/?recursive=true
+2024-12-05 04:25:49,073 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): 192.168.10.5:80
+2024-12-05 04:25:49,074 DEBUG    urllib3.connectionpool http://192.168.10.5:80 "GET /computeMetadata/v1/instance/service-accounts/44676487926-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 144
+2024-12-05 04:25:49,075 DEBUG    google.auth.transport.requests Making request: GET http://192.168.10.5/computeMetadata/v1/instance/service-accounts/44676487926-compute@developer.gserviceaccount.com/token
+2024-12-05 04:25:49,077 DEBUG    urllib3.connectionpool http://192.168.10.5:80 "GET /computeMetadata/v1/instance/service-accounts/44676487926-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 1084
+2024-12-05 04:25:49,409 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2024-12-05 04:25:51,087 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "GET /compute/v1/projects/trading-signals-proj/regions/asia-south1?alt=json HTTP/1.1" 200 None
+2024-12-05 04:25:51,137 WARNING  root            Property validation for compute/region was skipped.
+2024-12-05 04:25:51,138 INFO     ___FILE_ONLY___ Updated property [compute/region].
+
+2024-12-05 04:25:51,139 DEBUG    root            Chosen display Format:default
+2024-12-05 04:25:51,140 INFO     root            Display format: "default"
+2024-12-05 04:25:51,140 DEBUG    root            SDK update checks are disabled.
+2024-12-05 04:25:51,143 INFO     ___FILE_ONLY___ 
+
+To take a quick anonymous survey, run:
+  $ gcloud survey
+
+

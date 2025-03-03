@@ -1,0 +1,100 @@
+from flask import Flask, jsonify, render_template
+import os
+from fyers_apiv3 import fyersModel
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as EC
+# from selenium.common.exceptions import ElementNotInteractableException, TimeoutException
+# from pyotp import TOTP
+# from dotenv import load_dotenv
+# from flask_sqlalchemy import SQLAlchemy
+import datetime
+# from selenium.webdriver.firefox.options import Options as FirefoxOptions
+import pandas as pd
+from datetime import datetime, timedelta
+# import yfinance as yf
+
+## Loading .env Variables
+# load_dotenv()
+
+# Constants
+INTRADAY = "INTRADAY"
+DAY = "DAY"
+SUCCESS_CODE = "success"
+ERROR_CODE = "error"
+INVALID_PASSPHRASE_MSG = "Invalid passphrase provided."
+redirect_uri = "https://www.google.com/"
+# FYERS_CLIENT_ID = os.environ.get('FYERS_CLIENT_ID')
+# FYERS_SECRET_KEY = os.environ.get('FYERS_SECRET_KEY')
+# WEBHOOK_PASSPHRASE = os.environ.get('WEBHOOK_PASSPHRASE')
+# FYERS_USERNAME = os.environ.get('FYERS_USERNAME')
+# TOTP_KEY = os.environ.get('TOTP_KEY')
+# PIN1 = os.environ.get('PIN1')
+# PIN2 = os.environ.get('PIN2')
+# PIN3 = os.environ.get('PIN3')
+# PIN4 = os.environ.get('PIN4')
+
+FYERS_CLIENT_ID="GBJMHA44CH-100"
+FYERS_SECRET_KEY="YW543H05CG"
+WEBHOOK_PASSPHRASE="pass_check123"
+FYERS_USERNAME="YP03333"
+TOTP_KEY="your_totp_key_here"
+PIN1="0"
+PIN2="4"
+PIN3="8"
+PIN4="4"
+def init_fyers_session():
+    session = fyersModel.SessionModel(
+        client_id=FYERS_CLIENT_ID,
+        secret_key=FYERS_SECRET_KEY,
+        redirect_uri=redirect_uri,
+        response_type='code',
+        grant_type='authorization_code'
+    )
+    return session
+session=init_fyers_session()
+response = session.generate_authcode()
+response
+auth_code = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkubG9naW4uZnllcnMuaW4iLCJpYXQiOjE3NDA1MDQ1MjYsImV4cCI6MTc0MDUzNDUyNiwibmJmIjoxNzQwNTAzOTI2LCJhdWQiOiJbXCJ4OjBcIiwgXCJ4OjFcIiwgXCJ4OjJcIiwgXCJkOjFcIiwgXCJkOjJcIiwgXCJ4OjFcIiwgXCJ4OjBcIl0iLCJzdWIiOiJhdXRoX2NvZGUiLCJkaXNwbGF5X25hbWUiOiJZUDAzMzMzIiwib21zIjoiSzEiLCJoc21fa2V5IjoiZjZmMTdkMGRlN2ZjY2NiNDI4NTZlMjE5YWE0YTZlOWVlZjEwMTA2NWQxMjc2NTc4OGVlMzIxZTIiLCJpc0RkcGlFbmFibGVkIjoiTiIsImlzTXRmRW5hYmxlZCI6Ik4iLCJub25jZSI6IiIsImFwcF9pZCI6IkdCSk1IQTQ0Q0giLCJ1dWlkIjoiN2Q1ZDU4YzY3ODk4NDM0N2IxNTdjNzYwNzUxYjZiMTgiLCJpcEFkZHIiOiIwLjAuMC4wIiwic2NvcGUiOiIifQ.fnXihwiHW9iG78wp57mvdueJpCwCsrhFLcTYChjS7pU"
+session.set_token(auth_code)
+response = session.generate_token()
+access_token = response["access_token"]
+response
+def fyers_model():
+    token = access_token
+    fyers = fyersModel.FyersModel(client_id=FYERS_CLIENT_ID,
+                                      token=token,
+                                      is_async=False, 
+                                      log_path=os.getcwd())
+    return fyers
+
+def fetch_data_from_fyers():
+    fyers = fyers_model()
+    end_date = (datetime.now()-timedelta(days=0)).strftime("%Y-%m-%d")
+    start_date = (datetime.now() - timedelta(days=99)).strftime("%Y-%m-%d")
+    last_updated_time = datetime.now()
+    
+    data = {
+        "symbol": "MCX:CRUDEOIL25MARFUT",
+        "resolution": 1,
+        "date_format": "1",
+        "range_from": start_date,
+        "range_to": end_date,
+        "cont_flag": "1"
+    }
+
+    response = fyers.history(data)
+    if response['s'] == 'ok':
+        df = pd.DataFrame(response['candles'], columns=['timestamp', 'open', 'high', 'low', 'close', 'volume'])
+        df['timestamp'] = pd.to_datetime(df['timestamp'], unit='s', utc=True)  # First localize as UTC
+        df['timestamp'] = df['timestamp'].dt.tz_convert('Asia/Kolkata')  # Then convert to IST
+        df['timestamp'] = df['timestamp'].dt.tz_localize(None)
+        df["last_updated_time"] = last_updated_time
+
+        return df
+    else:
+        raise Exception(f"Failed to fetch data: {response}")
+    df=fetch_data_from_fyers()
+df
+df.to_csv(r"/Users/rikkawal/Downloads/edata.csv", index=False)
