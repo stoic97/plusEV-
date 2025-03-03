@@ -1,1 +1,5 @@
 wandb/
+echo venv/ > .gitignore
+echo __pycache__/ >> .gitignore
+echo *.pyc >> .gitignore
+echo "ev-plus-fastapi-1/ev-plus-fastapi-1/fastapi-app/venv/" >> .gitignore
